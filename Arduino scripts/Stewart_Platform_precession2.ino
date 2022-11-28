@@ -26,6 +26,8 @@ void setup() {
 
 void loop() {
   int i = 45;
+
+  // To initially bring M1, M2 to 0 deg; M3, M4 to 45 deg; M5, M6 to 90 deg
   while(i <= 90) {
     Servo1.write(90-i);
     Servo2.write(90+i);
@@ -39,6 +41,9 @@ void loop() {
   }
 
   int counter = 0;
+
+  // Operating the 3 servos with a phase difference of 45 deg between each servo
+  // In this case the farther adjacent vertex and the given vertex operate in same phase
   while(counter < 5) {
     i = 0;
     while(i <= 45) {
@@ -83,6 +88,8 @@ void loop() {
   }
 
   i = 0;
+
+  // To bring back the servos to mean position
   while(i <= 45) {
     Servo1.write(i);
     Servo2.write(180-i);

@@ -1,5 +1,7 @@
 // To include the Servo library
 #include <Servo.h>
+
+// Creating servo objects
 Servo Servo1;
 Servo Servo2;
 Servo Servo3;
@@ -26,7 +28,7 @@ void setup() {
 }
 
 void loop() {
-   //To move the platform vertically up and down
+   //To move the platform vertically up
   int i = 0;
   int j = 0;
   while(i <= 90) {
@@ -42,12 +44,8 @@ void loop() {
 
     i += 1;
   }
-//  Servo1.write(45);
-//  Servo2.write(135);
-//  Servo3.write(45);
-//  Servo4.write(135);
-//  Servo5.write(45);
-//  Servo6.write(135);
+
+  //To move the platform vertically down
   while(i >= 0) {
     j =180 - i;
     Servo1.write(i);
